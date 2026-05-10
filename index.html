@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IX. T AMIR HAMZAH | 2026</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.oncontextmenu = () => false;
+        document.onkeydown = (e) => { if (e.keyCode == 123 || (e.ctrlKey && e.shiftKey && e.keyCode == 73)) return false; };
+    </script>
+</head>
+<body>
+
+    <audio id="myAudio" loop preload="none">
+        <source src="https://files.catbox.moe/h9gsti.mp4" type="audio/mpeg">
+    </audio>
+
+    <header id="home">
+        <nav>
+            <div class="nav-container">
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#structure">STRUCTURE</a></li>
+                    <li><a href="#members">MEMBERS</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                </ul>
+                <button class="play-btn" id="playBtn" onclick="togglePlay()" style="background:#fff; border:none; padding:8px 20px; border-radius:20px; font-weight:bold; cursor:pointer; font-size:10px;">PLAY MUSIC</button>
+            </div>
+        </nav>
+        <div class="hero-content">
+            <div class="logo-wrapper">
+                <img src="https://files.catbox.moe/sen50c.jpg" alt="Logo" class="rotating-logo">
+            </div>
+            <h1 data-aos="fade-up">IX. T AMIR HAMZAH</h1>
+            <div id="typing-text" style="color:#fff; font-weight:600; margin:10px 0; min-height:20px; letter-spacing:2px;"></div>
+            <p data-aos="fade-up" data-aos-delay="400" style="letter-spacing:5px; font-weight:800; font-size:0.8rem; opacity:0.7;">PERIODE 2026</p>
+        </div>
+    </header>
+
+    <section id="structure" class="page-section">
+        <h2 class="section-title" data-aos="fade-up">CLASS STRUCTURE</h2>
+        <div class="org-chart">
+            <div class="chart-row" data-aos="fade-up">
+                <div class="member-item" style="width: 250px;">
+                    <div class="member-photo"><img src="LINK_FOTO_GURU"></div>
+                    <div class="member-info">
+                        <span class="role-label">WALI KELAS</span>
+                        <h4>Nama Guru, S.Pd</h4>
+                        <a href="#" class="ig-link">@ig_guru</a>
+                    </div>
+                </div>
+            </div>
+            <div class="connector"></div>
+            <div class="chart-row" data-aos="fade-up">
+                <div class="member-item">
+                    <div class="member-photo"><img src="LINK_FOTO_KETUA"></div>
+                    <div class="member-info">
+                        <span class="role-label">KETUA KELAS</span>
+                        <h4>M. Mirza Syahputra</h4>
+                        <a href="https://instagram.com/_mirza64_" class="ig-link">@_mirza64_</a>
+                    </div>
+                </div>
+                <div class="member-item">
+                    <div class="member-photo"><img src="LINK_FOTO_WAKIL"></div>
+                    <div class="member-info">
+                        <span class="role-label">WAKIL KETUA</span>
+                        <h4>M. Asyraf Chandra</h4>
+                        <a href="https://instagram.com/asyrafchandra26_" class="ig-link">@asyraf26</a>
+                    </div>
+                </div>
+            </div>
+            <div class="connector"></div>
+            <div class="chart-row" data-aos="fade-up">
+                <div class="member-item" style="width: 180px;">
+                    <div class="member-photo" style="height: 220px;"><img src="https://files.catbox.moe/z7u8ue.jpeg"></div>
+                    <div class="member-info">
+                        <span class="role-label">SEKRETARIS</span>
+                        <h4>Nama Sekretaris</h4>
+                    </div>
+                </div>
+                <div class="member-item" style="width: 180px;">
+                    <div class="member-photo" style="height: 220px;"><img src="LINK_FOTO_BENDAHARA"></div>
+                    <div class="member-info">
+                        <span class="role-label">BENDAHARA</span>
+                        <h4>Nama Bendahara</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="members" class="page-section alt-bg">
+        <h2 class="section-title" data-aos="fade-up">CLASS MEMBERS</h2>
+        <div class="members-grid" id="member-container"></div>
+    </section>
+
+    <section id="gallery" class="page-section">
+        <h2 class="section-title" data-aos="fade-up">GALLERY MEMORIES</h2>
+        <div class="gallery-masonry" id="gallery-container"></div>
+    </section>
+
+    <footer>
+        <h3 style="letter-spacing: 3px; margin-bottom: 15px;">IX T. AMIR HAMZAH</h3>
+        <div class="social-links" style="margin-bottom: 15px; font-size: 1.5rem; display: flex; justify-content: center; gap: 20px;">
+            <a href="#" style="color:white;"><i class="fab fa-instagram"></i></a>
+            <a href="#" style="color:white;"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p style="font-size: 10px; opacity: 0.5;">&copy; 2026 Official Class Website</p>
+    </footer>
+
+    <div id="photoModal" class="modal" onclick="this.style.display='none'"><img class="modal-content" id="imgFull"></div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        // Typing Effect
+        const text = "Satu Visi, Satu Misi, Satu Keluarga.";
+        let idx = 0;
+        function type() { if(idx < text.length) { document.getElementById("typing-text").innerHTML += text.charAt(idx); idx++; setTimeout(type, 100); } }
+
+        function togglePlay() { 
+            const a = document.getElementById("myAudio"); 
+            const b = document.getElementById("playBtn");
+            if(a.paused) { a.play(); b.innerText = "STOP MUSIC"; } else { a.pause(); b.innerText = "PLAY MUSIC"; }
+        }
+
+        // --- DATA ANGGOTA (GANTI LINK_FOTO DI SINI) ---
+        const classMembers = [
+            { name: "Ainayya Salsabila", ig: "ainayya.salsabila8", photo: "https://files.catbox.moe/z7u8ue.jpeg" },
+            { name: "Alvin Rauf Sandi", ig: "alvinrauf_", photo: "LINK_FOTO_2" },
+            { name: "Amirah Aqila", ig: "thyvmirra", photo: "LINK_FOTO_3" },
+            { name: "Angel Hutagalung", ig: "angelhutagalung", photo: "LINK_FOTO_4" },
+            { name: "Benedicta Artanami", ig: "dictatara", photo: "LINK_FOTO_5" },
+            { name: "JC Cruiser Samuel", ig: "sawit_11", photo: "LINK_FOTO_6" },
+            { name: "Khalishah Yumnazza", ig: "kyumnazzar", photo: "LINK_FOTO_7" },
+            { name: "Kriti Humairoh", ig: "kritihumairoh", photo: "LINK_FOTO_8" },
+            { name: "M. Asyraf Chandra", ig: "asyrafchandra26_", photo: "LINK_FOTO_9" },
+            { name: "M. Mirza Syahputra", ig: "_mirza64_", photo: "LINK_FOTO_10" },
+            { name: "Mario Risky Bayu", ig: "mariorizkybyu", photo: "LINK_FOTO_11" },
+            { name: "Muhammad Fadhil", ig: "dill_1171", photo: "LINK_FOTO_12" },
+            { name: "M. Fatir Wijaya", ig: "patierr22", photo: "LINK_FOTO_13" },
+            { name: "M. Fachri Afif", ig: "apeprmbe", photo: "LINK_FOTO_14" },
+            { name: "M. Kenzi Rakka", ig: "kenrp14", photo: "LINK_FOTO_15" },
+            { name: "M. Rifqi Nugraha", ig: "_qii115", photo: "LINK_FOTO_16" },
+            { name: "Najwa Asilah Putri", ig: "waafw_", photo: "LINK_FOTO_17" },
+            { name: "Natasya Olivia", ig: "tasyaolivvs", photo: "LINK_FOTO_18" },
+            { name: "Nayla Jasmine Lubis", ig: "naylajasminelbs", photo: "LINK_FOTO_19" },
+            { name: "Noval Kurniawan", ig: "novalkurnia", photo: "LINK_FOTO_20" },
+            { name: "Okto Iglesias", ig: "okto_na70", photo: "LINK_FOTO_21" },
+            { name: "Radhyka Qafadilla", ig: "its.radhyka", photo: "LINK_FOTO_22" },
+            { name: "Rafqy Rahmatillah", ig: "akurafqy_r", photo: "LINK_FOTO_23" },
+            { name: "Salsabilla Yasmin", ig: "salsabilla_ysmn", photo: "LINK_FOTO_24" },
+            { name: "Shely Arliza", ig: "shelylizaa", photo: "LINK_FOTO_25" },
+            { name: "Syaiddina Fatiha", ig: "syaiddina_fatiha", photo: "LINK_FOTO_26" },
+            { name: "Syharina", ig: "rinna_ryy", photo: "LINK_FOTO_27" },
+            { name: "Tasya", ig: "tasyyalne", photo: "LINK_FOTO_28" }
+        ];
+
+        const mContainer = document.getElementById('member-container');
+        classMembers.forEach((m, i) => {
+            mContainer.innerHTML += `
+                <div class="member-item" data-aos="fade-up">
+                    <div class="member-photo"><img src="${m.photo}" alt="${m.name}" loading="lazy"></div>
+                    <div class="member-info">
+                        <span class="absent-no">${(i+1).toString().padStart(2, '0')}</span>
+                        <span class="role-label">MEMBER</span>
+                        <h4>${m.name}</h4>
+                        <a href="https://instagram.com/${m.ig}" target="_blank" class="ig-link">@${m.ig}</a>
+                    </div>
+                </div>`;
+        });
+
+        // --- DATA GALLERY (TAMBAHKAN LINK FOTO KENANGAN DI SINI) ---
+        const galleryList = [
+            "https://files.catbox.moe/ijdltk.jpeg",
+            "https://files.catbox.moe/z7u8ue.jpeg",
+            "https://files.catbox.moe/ani541.jpeg",
+            "https://files.catbox.moe/dfqiya.jpeg",
+            "https://files.catbox.moe/q37v55.jpeg",
+            "https://files.catbox.moe/94rfsc.jpeg",
+            "https://files.catbox.moe/jf33jq.jpeg",
+            "https://files.catbox.moe/ijdltk.jpeg",
+            "https://files.catbox.moe/jxp3jc.jpeg",
+            "https://files.catbox.moe/hp7i1z.jpeg",
+            "https://files.catbox.moe/pjdpja.jpeg",
+            "https://files.catbox.moe/cokyvw.jpeg",
+            "https://files.catbox.moe/j4sfed.jpeg",
+            "https://files.catbox.moe/p7dlef.jpeg",
+            "https://files.catbox.moe/udv48t.jpeg",
+            "https://files.catbox.moe/1a9f8z.jpeg",
+            "https://files.catbox.moe/ktsmpv.jpeg",
+        ];
+
+        const gContainer = document.getElementById('gallery-container');
+        galleryList.forEach(s => {
+            gContainer.innerHTML += `<div class="gallery-item" data-aos="zoom-in" onclick="openPhoto('${s}')"><img src="${s}" loading="lazy"></div>`;
+        });
+
+        function openPhoto(s) { document.getElementById("photoModal").style.display = "flex"; document.getElementById("imgFull").src = s; }
+
+        window.onload = type;
+    </script>
+</body>
+</html>
